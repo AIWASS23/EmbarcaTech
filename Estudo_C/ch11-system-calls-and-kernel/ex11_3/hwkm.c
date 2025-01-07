@@ -5,6 +5,11 @@
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/proc_fs.h>
+#include <unistd.h>    // Funções POSIX (fork, exec, etc.)
+#include <fcntl.h>     // Manipulação de arquivos
+#include <sys/types.h> // Tipos de dados padrão
+#include <sys/socket.h>// Sockets
+#include <pthread.h> 
 
 // The structure pointing to the proc file
 struct proc_dir_entry *proc_file;

@@ -4,9 +4,8 @@
 
 #include <stdio.h>
 
-#define abs(x) _Generic((x), \
-                        int: absi, \
-                        double: absd)(x)
+#define abs(x) _Generic((x), int: absi, double: absd)(x)
+
 int absi(int a) {
   return a > 0 ? a : -a;
 }

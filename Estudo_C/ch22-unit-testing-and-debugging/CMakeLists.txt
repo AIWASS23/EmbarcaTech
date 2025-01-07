@@ -5,6 +5,12 @@ add_subdirectory(googletest)
 include_directories(/usr/local/include googletest/googletest/include googletest/googlemock/include)
 link_directories(/usr/local/lib)
 
+# Adicionar diretórios de inclusão
+include_directories(/opt/homebrew/Cellar/cmocka/1.1.7/include)
+
+# Adicionar diretórios de bibliotecas
+link_directories(/opt/homebrew/Cellar/cmocka/1.1.7/lib)
+
 set(CMAKE_C_FLAGS "-g")
 set(CMAKE_CXX_FLAGS "-std=c++11 -g")
 
